@@ -1,0 +1,317 @@
+<div class="row-wrap">
+    <div class="flex-p w-100">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- <div class="row" style="margin-bottom:7px;">
+                    <div class="col-xs-6 ">
+                        <div class="pills w-100 flex-p">
+                            <ul class="nav nav-pills">
+                                <li routerLinkActive="active">
+                                    <a mat-raised-button class="navtabWidth"
+                                    [routerLink]="['/admin/jobs/gridview']">
+                                    <mat-icon>grid_on</mat-icon> Grid view
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a mat-raised-button class="navtabWidth"
+                                [routerLink]="['/admin/jobs/mapview']">
+                                <mat-icon>place </mat-icon> Map view
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6 ">
+            </div>
+        </div> -->
+        
+        <!-- <div class="row" style="margin-top:15px;">
+            <div class="col-lg-4"> 
+                
+                <mat-card-header fxLayoutAlign="center center">                
+                    <mat-card-subtitle><h2>Top 5 States</h2></mat-card-subtitle>
+                </mat-card-header>
+                <div class="w-100 h-300p">
+                    <ngx-charts-pie-chart
+                    [scheme]="colorScheme"
+                    [results]="single"
+                    [legend]="showLegend"
+                    [explodeSlices]="explodeSlices"
+                    [labels]="showLabels"
+                    [doughnut]="doughnut"
+                    [gradient]="gradient"
+                    (select)="onSelect($event)">
+                </ngx-charts-pie-chart>                  
+            </div>
+            
+        </div>
+        <div class="col-lg-4"> 
+            
+            <mat-card-header fxLayoutAlign="center center">                
+                <mat-card-subtitle><h2>Industry</h2></mat-card-subtitle>
+            </mat-card-header>
+            <div class="w-100 h-300p">
+                <ngx-charts-pie-chart
+                [scheme]="colorScheme"
+                [results]="multi"
+                [legend]="showLegend"
+                [explodeSlices]="explodeSlices"
+                [labels]="showLabels"
+                [doughnut]="doughnut"
+                [gradient]="gradient"
+                (select)="onSelect($event)">
+            </ngx-charts-pie-chart>                  
+        </div>
+        
+    </div>
+    <div class="col-lg-4"> 
+        
+        <mat-card-header fxLayoutAlign="center center">                
+            <mat-card-subtitle><h2>New vs Repeat</h2></mat-card-subtitle>
+        </mat-card-header>
+        <div class="w-100 h-300p">
+            <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="triple"
+            [legend]="showLegend"
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+            (select)="onSelect($event)">
+        </ngx-charts-pie-chart>                  
+    </div>
+    
+</div>
+</div> -->
+
+
+
+
+<div class="row" style="margin-bottom:7px;">
+    <div class="col-xs-2 ">
+    </div>
+    <div class="col-xs-10 ">
+        <div class="flex-p">
+            <button mat-raised-button class="pull-right  btn-primary" (click)="openClientDialog('add')">
+                <mat-icon>add</mat-icon> Add Task
+            </button>
+            <button mat-raised-button  class="pull-right  btn-primary margin-right-10" (click)="openGridColumn()" >
+                <mat-icon>grid_on</mat-icon> Grid Columns
+            </button>
+            <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+            (click)="filterToggle = !filterToggle">
+            <mat-icon>filter_list</mat-icon> Filter
+        </button>
+        
+        
+        <!-- <button mat-raised-button class="pull-right tab2" style="margin-right:10px!important">
+            New Customers
+        </button>
+        <button mat-raised-button class="pull-right tab2" style="margin-right:10px!important">
+            Inactive (135)
+        </button>
+        <button mat-raised-button class="pull-right tab2" style="margin-right:10px!important">
+            Active (157)
+        </button> -->
+        
+    </div>
+    
+</div>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100" *ngIf="filterToggle">
+        <mat-card class="filter">
+            <mat-card-content>
+                <div class="row col-sm-12">
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Project#:</div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select by Project#">
+                                <mat-option [value]="0">04</mat-option>
+                                <mat-option [value]="1">03</mat-option>
+                                <mat-option [value]="2">02</mat-option>
+                                <mat-option [value]="3">01</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            By Job#: 
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" placeholder="Search by Job#" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Engineer:</div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select by Engineer">
+                                <mat-option [value]="0">Mukesh</mat-option>
+                                <mat-option [value]="1">Adityesh</mat-option>
+                                <mat-option [value]="2">Vijay</mat-option>
+                                <mat-option [value]="3">Murali</mat-option>
+                            </mat-select>                        
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="row col-sm-12" style="margin-top:20px">
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By In Charge:</div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select by In Charge">
+                                <mat-option [value]="0">Vijay</mat-option>
+                                <mat-option [value]="1">Raj Kumar</mat-option>
+                                <mat-option [value]="2">Lokesh</mat-option>
+                                <mat-option [value]="3">Murali</mat-option>
+                            </mat-select>                        
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Target Date:</div>
+                        <div class="col-sm-8">
+                            <input type="date" placeholder="Search by Target Date" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Status:</div>
+                        <div class="col-sm-8">
+                            
+                            <mat-select class="form-control" placeholder="Select by Status">
+                                <mat-option [value]="0">In Progress</mat-option>
+                                <mat-option [value]="1">Delayed</mat-option>
+                                <mat-option [value]="2">Done</mat-option>
+                            </mat-select>                        
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                
+                <div class="row col-sm-12" style="margin-top:20px" >
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Completion Date:</div>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">By Approval:</div>
+                        <div class="col-sm-8">
+                            <mat-select class='form-control' placeholder="Search by Approval">
+                                <mat-option [value]=1 >Approved</mat-option>
+                                <mat-option [value]=2 >Pending</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            Keyword: 
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" placeholder="Search by Keyword" class="form-control" >
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row col-sm-12" style="margin-top:20px">
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            Archive: 
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="checkbox" style="margin-top: 9px;width: 20px;height: 20px;;"  >
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2">
+                        <div class="col-lg-1" style="margin-top: -5px;">
+                            <button mat-raised-button  class="pull-right btn-primary"><mat-icon>youtube_searched_for</mat-icon> Search</button>
+                            
+                        </div>
+                        <div class="col-lg-1">
+                            <button mat-raised-button style="background-color:#37474f; color:#fff !important;margin-top: -5px" ><mat-icon>settings_backup_restore</mat-icon> Clear</button>
+                            
+                        </div>
+                        <a (click)="filterToggle = !filterToggle" class="pull-right" style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+                            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+</div>
+
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12">
+        <div id="divQuotesGrid" class="table-responsive">
+            <table matSort id="example2" class="table table-bordered table-hover">
+                <thead class="tbl-head">
+                    <tr>
+                        <th>Project #</th>
+                        <th>Job #</th>
+                        <th>Description</th>
+                        <th>Engineer</th>
+                        <th>In Charge</th>
+                        <th class="text-center">Work Duration in Days</th>
+                        <th class="text-center">Target Date</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Completion Date</th>
+                        <th class="text-center">Approval</th>
+                        <th class="text-center">Archive</th>
+                            <th class="text-center" style="width: 112px!important;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of values">
+                            <td>{{item.project}}</td>
+                            <td>{{item.job}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.engineer}}</td>
+                            <td>{{item.incharge}}</td>
+                            <td style="text-align: center!important;">{{item.work}}</td>
+                            <td style="text-align: center!important;">{{item.target}}</td>
+                            <td style="text-align: center!important;">{{item.status}}</td>
+                            <td style="text-align: center!important;">{{item.completion}}</td>
+                            <td style="text-align: center!important;"><input type="checkbox"></td>
+                            <td style="text-align: center!important;" ><input mwlConfirmationPopover
+                                [popoverTitle]="popoverTitle1"
+                                [popoverMessage]="popoverMessage1"
+                                placement="left"
+                                (confirm)="deleteUser()"
+                                (cancel)="cancelClicked1 = true" type="checkbox"></td>
+                            <td  class="text-center">
+                                <a style="cursor: pointer;margin-right:10px; " matTooltip="Update Project"  >
+                                    <i class="fa fa-edit" style="color: cornflowerblue"></i>
+                                </a>
+                                <a ><i class="fa fa-trash red" matTooltip="Delete Project"  style="cursor: pointer;"></i></a>
+                            </td> 
+                        </tr>
+                        <!-- <tr *ngIf="totalProjects ==null || totalProjects.length ==0">
+                            <td colspan="13">No data available</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+                [pageSizeOptions]="[5, 10, 25, 50, 100]" 
+                showFirstLastButtons></mat-paginator>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+</div>
+
+</div>
+</div>

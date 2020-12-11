@@ -1,0 +1,379 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flex-p" style="margin-top: 5px;">
+    <div class="row" style="margin-bottom:7px;">
+        <div class="col-xs-6 ">
+        </div>
+        <div class="col-xs-6 ">
+            <div class="flex-p">
+                <!-- <button mat-raised-button class="pull-right  btn-primary" (click)="openProjectDialog()" >
+                    <mat-icon>add</mat-icon> Add Member
+                </button>
+                <button mat-raised-button  class="pull-right  btn-primary margin-right-10" (click)="opengridcoloum()" >
+                    <mat-icon>grid_on</mat-icon> Grid Columns
+                </button> -->
+                <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                (click)="filterToggle = !filterToggle">
+                <mat-icon>filter_list</mat-icon> Filter
+            </button>
+            
+        </div>
+        
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" *ngIf="filterToggle">
+    <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+        <mat-card class="filter">
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                           From Date: 
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="date"  class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            To Date: 
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="date"  class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            Project #: 
+                        </div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select Project">
+                                <mat-option [value]="0">06</mat-option>
+                                <mat-option [value]="1">05</mat-option>
+                                <mat-option [value]="2">04</mat-option>
+                                <mat-option [value]="3">03</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="padding-top:10px !important">
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            Engineer: 
+                        </div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select Engineer">
+                                <mat-option [value]="0">Mukesh</mat-option>
+                                <mat-option [value]="1">Adityesh</mat-option>
+                                <mat-option [value]="2">Vijay</mat-option>
+                                <mat-option [value]="3">Murali</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            In Charge: 
+                        </div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select Person In Charge">
+                                <mat-option [value]="0">Dhanraj</mat-option>
+                                <mat-option [value]="1">Raj Kumar</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+                   
+                    <div class="col-sm-4">
+                        <div class="col-sm-4 newMarginClass">
+                            Project Status: 
+                        </div>
+                        <div class="col-sm-8">
+                            <mat-select class="form-control" placeholder="Select Project Status">
+                                <mat-option [value]="0">Initial</mat-option>
+                                <mat-option [value]="1">Active</mat-option>
+                                <mat-option [value]="2">On Hold</mat-option>
+                                <mat-option [value]="3">Completed</mat-option>
+                            </mat-select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="padding-top:10px !important">
+                    <div style="position: relative;left: 75%;">
+                    
+                    <div class="col-lg-1" style="margin-left:195px!important;">
+                        <button mat-raised-button  class="pull-right btn-primary"><mat-icon>youtube_searched_for</mat-icon> Search</button>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -18px;">
+                        <button mat-raised-button style="background-color:#37474f; color:#fff !important" ><mat-icon>settings_backup_restore</mat-icon> Clear</button>
+                    </div>
+                    <a (click)="filterToggle = !filterToggle" class="pull-right" style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                    </a>
+                    </div>
+                    
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
+
+    <div class="row ">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="w-100 flex-p">
+          <div class="dashboard-stat blue-madison">
+            <div class="visual">
+              <i class="fa fa-users fa-1x"></i>
+            </div>
+            <div class="details">
+              <div class="number">
+                Active Tasks - 53
+              </div>
+              <div class="desc">
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="w-100 flex-p">
+          <div class="dashboard-stat blue-madison">
+            <div class="visual">
+              <i class="fa fa-users fa-1x"></i>
+            </div>
+            <div class="details">
+              <div class="number">
+                Delayed Tasks - 5
+              </div>
+              <div class="desc">
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="w-100 flex-p">
+          <div class="dashboard-stat ppurple-madison">
+            <div class="visual">
+              <i class="fa fa-users"></i>
+            </div>
+            <div class="details">
+              <div class="number">
+                Productivity - 95%
+              </div>
+              <div class="desc">
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+
+  
+    
+    <div class="row" style="padding-left:7px !important;padding-right:7px !important;">
+      <div fxFlex="100" fxFlex.gt-sm="100" class="flex-p">
+        <mat-card>
+          <mat-card-header fxLayoutAlign="center center">                
+              <mat-card-subtitle><h2>Monthly trend of Delayed Tasks</h2></mat-card-subtitle>
+          </mat-card-header>
+          <div class="w-100 h-300p">
+              <ngx-charts-line-chart
+                  [scheme]="colorScheme"
+                  [results]="analytics"
+                  [gradient]="gradient"
+                  [xAxis]="showXAxis"
+                  [yAxis]="showYAxis"
+                  [legend]="showLegends"
+                  [showXAxisLabel]="showXAxisLabel"
+                  [showYAxisLabel]="showYAxisLabel"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                  [autoScale]="autoScale"
+                  (select)="onSelect($event)">
+              </ngx-charts-line-chart>                  
+          </div>
+      </mat-card>
+    </div>
+  </div>
+  
+  <div class="row ">
+    <div fxFlex="100" fxFlex.gt-sm="50" class="flex-p">
+      <div class="flex-p"> 
+        <mat-card>
+          <mat-card-header fxLayoutAlign="center center">                
+            <mat-card-subtitle><h2>By Status</h2></mat-card-subtitle>
+          </mat-card-header>
+          <div class="w-100 h-300p">
+            <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="single"
+            [legend]="showLegend"
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+            (select)="onSelect($event)">
+          </ngx-charts-pie-chart>                  
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div fxFlex="100" fxFlex.gt-sm="50" class="flex-p">
+    <div class="flex-p"> 
+      <mat-card>
+        <mat-card-header fxLayoutAlign="center center">                
+          <mat-card-subtitle><h2>Delay Reason</h2></mat-card-subtitle>
+        </mat-card-header>
+        <div class="w-100 h-300p">
+          <ngx-charts-pie-chart
+          [scheme]="colorScheme"
+          [results]="singles"
+          [legend]="showLegend"
+          [explodeSlices]="explodeSlices"
+          [labels]="showLabels"
+          [doughnut]="doughnut"
+          [gradient]="gradient"
+          (select)="onSelect($event)">
+        </ngx-charts-pie-chart>                  
+      </div>
+    </mat-card>
+  </div>
+  </div>
+  </div>
+  
+  <!--<h3 style="text-align: center;">Sales Log</h3>
+  <div class="row"> 
+    
+    <div class="col-sm-4 mx-auto">
+      <div class="col-12 text-center mb-4">
+          <h5 class="fontClass">Top 5 Customers</h5>
+      </div>
+      <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+              <tr>
+                  <th >Customer Name</th>
+                  <th class="text-center tab-width">Revenue </th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of conversations">
+                  <td>{{item.lead_name}}</td>
+                  <td *ngIf="item.days" [ngClass] = "item.color ? 'redClassColor text-center':'greenClassColor text-center'" >{{item.days}}</td>
+                  <td *ngIf="!item.days" class="text-center">-</td>
+                  
+              </tr>
+          </tbody>
+      </table>
+  
+  </div> 
+  <div class="col-sm-4 mx-auto">
+      <div class="col-12 text-center mb-4">
+          <h5 class="fontClass">Incentives Dashboard</h5>
+      </div>
+      <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+              <tr>
+                  <th >Customer Name</th>
+                  <th class="text-center tab-width" >Incentives </th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of conversations">
+                  <td>{{item.lead_name}}</td>
+                  <td *ngIf="item.days" [ngClass] = "item.color ? 'redClassColor text-center':'greenClassColor text-center'" >{{item.days}}</td>
+                  <td *ngIf="!item.days" class="text-center">-</td>
+                  
+              </tr>
+          </tbody>
+      </table>
+  
+  </div> 
+  <div class="col-sm-4 mx-auto">
+      <div class="col-12 text-center mb-4">
+          <h5 class="fontClass">Commissions Earned</h5>
+      </div>
+      <table id="example2" class="table table-bordered table-hover">
+          <thead class="tbl-head">
+              <tr>
+                  <th >Customer Name</th>
+                  <th class="text-center tab-width">Commission </th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of conversations">
+                  <td>{{item.lead_name}}</td>
+                  <td *ngIf="item.days" [ngClass] = "item.color ? 'redClassColor text-center':'greenClassColor text-center'" >{{item.days}}</td>
+                  <td *ngIf="!item.days" class="text-center">-</td>
+                 
+              </tr>
+          </tbody>
+      </table>
+  
+  </div> 
+  </div>
+  
+  <div class="row"> 
+      <div class="col-sm-4 mx-auto">
+        <div class="col-12 text-center mb-4">
+            <h5 class="fontClass">Commissions Paid</h5>
+        </div>
+        <table id="example2" class="table table-bordered table-hover">
+            <thead class="tbl-head">
+                <tr>
+                    <th >Customer Name</th>
+                    <th class="text-center tab-width">Paid </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of conversations">
+                    <td>{{item.lead_name}}</td>
+                    <td *ngIf="item.days" [ngClass] = "item.color ? 'redClassColor text-center':'greenClassColor text-center'" >{{item.days}}</td>
+                    <td *ngIf="!item.days" class="text-center">-</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    
+    </div> 
+    <div class="col-sm-4 mx-auto">
+        <div class="col-12 text-center mb-4">
+            <h5 class="fontClass">Commissions Payable</h5>
+        </div>
+        <table id="example2" class="table table-bordered table-hover">
+            <thead class="tbl-head">
+                <tr>
+                    <th >Customer Name</th>
+                    <th class="text-center tab-width" >Payable </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of conversations">
+                    <td>{{item.lead_name}}</td>
+                    <td *ngIf="item.days" [ngClass] = "item.color ? 'redClassColor text-center':'greenClassColor text-center'" >{{item.days}}</td>
+                    <td *ngIf="!item.days" class="text-center">-</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    
+    </div> 
+   
+    </div>
+  </div> 
+  
+  <div class="row d-flex">
+    <div class="col-6 mx-auto middle">
+      <img style="margin-top: 15%; display: flex; margin-left: auto; margin-right: auto;" src="/assets/img/under-construction.png" height="400px" alt="under-construction">
+    </div>
+  </div>-->
