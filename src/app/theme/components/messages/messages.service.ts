@@ -67,28 +67,28 @@ export class MessagesService {
             day: '09',
             month: 'Dec',
             title: '03S0103',
-            text: 'Task is expected to complete in 3 days',
+            text: 'Task is pending for approval from last 3 days',
             color: 'danger'
         },       
         {
             day: '15',
             month: 'Dec',
             title: '02S0302',
-            text: 'Task is expected to complete in 2 days',
+            text: 'Task is pending for approval from last 4 days',
             color: 'primary'
         },
         {
             day: '12',
             month: 'Dec',
             title: '03S0112',
-            text: 'Task is expected to complete in 5 days',
+            text: 'Task is pending for approval from last 2 days',
             color: 'info'
         },
         {
             day: '14',
             month: 'Dec',
             title: '04S0113',
-            text: 'Task is expected to complete in 3 days',
+            text: 'Task is pending for approval from last 5 days',
             color: 'warning'
         },
         // {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewEncapsulation } from '@angular/core';
 // import { AddClientDialogComponent } from '../add-client-dialog/add-client-dialog.component';
 import { DeleteConfirmDialogComponent } from 'src/app/shared/delete-confirm-dialog/delete-confirm-dialog.component';
 import { PageEvent, MatDialog, MAT_DIALOG_DATA } from '@angular/material';
@@ -12,7 +12,8 @@ import {GridColumnsJobsComponent} from '../grid-columns-jobs/grid-columns-jobs.c
 @Component({
   selector: 'app-grid-view',
   templateUrl: './grid-view.component.html',
-  styleUrls: ['./grid-view.component.scss']
+  styleUrls: ['./grid-view.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class GridViewComponent implements OnInit {
 
@@ -54,9 +55,9 @@ export class GridViewComponent implements OnInit {
   public cancelClicked: boolean = false;
   values = [
     {"project":"03","job":"03S0103",description:"Complete the Installation",engineer:"Mukesh",incharge:"Raj Kumar",work:"5",target:"15-Dec-2020",status:"In Progress",completion:"14-Dec-2020"},
-    {"project":"04","job":"02S0102",description:"Complete the Installation",engineer:"Adityesh",incharge:"Murali",work:"5",target:"13-Dec-2020",status:"Done",completion:"12-Dec-2020"},
-    {"project":"02","job":"05S0103",description:"Complete the Installation",engineer:"Vijay",incharge:"Lokesh",work:"5",target:"14-Dec-2020",status:"Delayed",completion:"11-Dec-2020"},
-    {"project":"01","job":"08S0104",description:"Complete the Installation",engineer:"Murali",incharge:"Vijay",work:"5",target:"13-Dec-2020",status:"In Progress",completion:"10-Dec-2020"},
+    {"project":"02","job":"02D0102",description:"Complete the Installation",engineer:"Adityesh",incharge:"Dhanraj",work:"5",target:"13-Dec-2020",status:"Done",completion:"12-Dec-2020"},
+    {"project":"05","job":"05P0103",description:"Complete the Installation",engineer:"Vijay",incharge:"Dhanraj",work:"5",target:"14-Dec-2020",status:"Delayed",completion:"11-Dec-2020"},
+    {"project":"08","job":"08M0104",description:"Complete the Installation",engineer:"Murali",incharge:"Raj Kumar",work:"5",target:"13-Dec-2020",status:"In Progress",completion:"10-Dec-2020"},
   ]
   
   constructor(public dialog: MatDialog,public appSettings:AppSettings) {
@@ -117,7 +118,7 @@ export class GridViewComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   
   public onSelect(event) {
     console.log(event);

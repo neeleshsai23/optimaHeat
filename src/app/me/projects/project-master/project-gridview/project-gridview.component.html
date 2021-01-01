@@ -9,7 +9,19 @@
                         </div>
                     </div>
                     <div class="col-xs-6 ">
+                        <div class="flex-p">
+                            <button mat-raised-button class="pull-right  btn-primary" (click)="openProjectDialog(null)">
+                                <mat-icon>add</mat-icon> Add Project
+                            </button>
+                            <button mat-raised-button  class="pull-right  btn-primary margin-right-10" (click)="openGridColumns()">
+                                <mat-icon>grid_on</mat-icon> Grid Columns
+                            </button>
+                            <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                            (click)="filterToggle = !filterToggle">
+                            <mat-icon>filter_list</mat-icon> Filter
+                        </button>
                         
+                    </div>
                         
                     </div>
                 </div>
@@ -76,7 +88,7 @@
         </div>
     </div> -->
     
-    <div class="row" style="margin-bottom:7px;">
+    <!-- <div class="row" style="margin-bottom:7px;">
         <div class="col-xs-6 ">
         </div>
         <div class="col-xs-6 ">
@@ -95,7 +107,7 @@
         </div>
         
     </div>
-</div>
+</div> -->
 
 <div fxLayout="row wrap" *ngIf="filterToggle">
     <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
@@ -137,9 +149,11 @@
                             By Start Date: 
                         </div>
                         <div class="col-sm-8">
-                            <mat-select class="form-control" placeholder="Search by Start Date">
-                                <input type="date" class="form-control">
-                            </mat-select>
+                            
+                                <input class="form-control"   placeholder="MM/DD/YYYY"
+                class="form-control" id="db" [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" name="dt1">
+              <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+                            
                         </div>
                       </div>
                       <div class="col-sm-4" style="margin-top: 20px;">
@@ -147,9 +161,9 @@
                             By Due Date: 
                         </div>
                         <div class="col-sm-8">
-                            <mat-select class="form-control" placeholder="Search by Due Date">
-                                <input type="date" class="form-control">
-                            </mat-select>
+                            <input class="form-control"   placeholder="MM/DD/YYYY"
+                class="form-control" id="db" [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" name="dt2">
+              <owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
                         </div>
                       </div>
                       <div class="col-sm-4" style="margin-top: 20px;">
@@ -232,19 +246,19 @@
             <table matSort id="example2" class="table table-bordered table-hover">
                 <thead class="tbl-head">
                     <tr>
-                        <th>Project Code #</th>
+                        <th style="min-width:80px">Project #</th>
                         <th>Project Name</th>
                         <th>Client Name</th>
                         <th>Project Type</th>
                         <th>Location</th>
                         <th>In Charge</th>
                         <th class="text-center">Tasks</th>
-                        <th class="text-center">Start Date</th>
-                        <th class="text-center">Setup Due Date</th>
+                        <th class="text-center" style="min-width:100px">Start Date</th>
+                        <th class="text-center" style="min-width:100px">Setup Due Date</th>
                         <th class="text-center">Status</th>
                         <th class="text-center">Awarded Amount</th>
                         <th class="text-center">Invoiced Amount</th>
-                        <th class="text-center">Due Amount</th>
+                        <th class="text-center" style="min-width:100px">Due Amount</th>
 
                         <th class="text-center" style="width: 112px!important;">Actions</th>
                     </tr>
@@ -295,7 +309,7 @@
                         
                     </td>
                    
-                    <td [ngStyle]="{'color': item.status=='Active'? 'rgb(72, 158, 19)' : 'red'}" style="text-align: center !important;">
+                    <td [ngStyle]="{'color': item.status=='Active'? 'blue' : 'red'}" style="text-align: center !important;">
                         {{item.status}}
                     </td>
                     <td class="text-center">

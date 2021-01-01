@@ -173,7 +173,9 @@
                     <div class="col-sm-4">
                         <div class="col-sm-4 newMarginClass">By Target Date:</div>
                         <div class="col-sm-8">
-                            <input type="date" placeholder="Search by Target Date" class="form-control" >
+                            <input class="form-control"   placeholder="MM/DD/YYYY"
+                class="form-control" id="db" [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" name="dt2">
+              <owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -198,7 +200,9 @@
                     <div class="col-sm-4">
                         <div class="col-sm-4 newMarginClass">By Completion Date:</div>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control"/>
+                            <input class="form-control"   placeholder="MM/DD/YYYY"
+                class="form-control" id="db" [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" name="dt1">
+              <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -223,7 +227,7 @@
                 <div class="row col-sm-12" style="margin-top:20px">
                     <div class="col-sm-4">
                         <div class="col-sm-4 newMarginClass">
-                            Archive: 
+                            Archived: 
                         </div>
                         <div class="col-sm-8">
                             <input type="checkbox" style="margin-top: 9px;width: 20px;height: 20px;;"  >
@@ -267,7 +271,7 @@
                         <th class="text-center">Target Date</th>
                         <th class="text-center">Status</th>
                         <th class="text-center">Completion Date</th>
-                        <th class="text-center">Approval</th>
+                        <th class="text-center">Approve</th>
                         <th class="text-center">Archive</th>
                             <th class="text-center" style="width: 112px!important;">Actions</th>
                         </tr>

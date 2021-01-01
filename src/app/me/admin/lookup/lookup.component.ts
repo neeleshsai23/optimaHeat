@@ -6,7 +6,7 @@ import { AlertService } from '../../../shared/services/alert.service';
 @Component({
   selector: 'app-lookup',
   templateUrl: './lookup.component.html',
-  // styleUrls: ['./lookup.component.scss'],
+  styleUrls: ['./lookup.component.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [AlertService]
 })

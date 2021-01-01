@@ -51,10 +51,10 @@ export class ProjectGridviewComponent implements OnInit {
   public popoverStatusMessage: string = 'Are you sure you want to change status?';
   public cancelClicked: boolean = false;
   values = [
-    {project:"06",projectName:"Triple effect evaporator followed by ATFD",clientName:"Biotherm Industries",projectType:"ZLDP",location:"Hyderabad",incharge:"Dhanraj",tasks:"56/75",start:"13-Dec-2020",setup:"13-Feb-2021",status:"Active",awarded:"2,50,000 Rs",invoiced:"1,50,000 Rs",due:"1,00,000 Rs"},
-    {project:"05",projectName:"Triple effect evaporator with Thermo compressor followed by ATFD",clientName:"APex Ecotech Pvt Ltd",projectType:"BGS",location:"Bangalore",incharge:"Raj Kumar",tasks:"25/50",start:"12-Nov-2020",setup:"25-Dec-2020",status:"On Hold",awarded:"5,50,000 Rs",invoiced:"3,50,000 Rs",due:"2,00,000 Rs"},
-    {project:"06",projectName:"Triple effect evaporator followed by ATFD",clientName:"Biotherm Industries",projectType:"ZLDP",location:"Hyderabad",incharge:"Dhanraj",tasks:"56/75",start:"13-Dec-2020",setup:"13-Feb-2021",status:"Active",awarded:"2,50,000 Rs",invoiced:"1,50,000 Rs",due:"1,00,000 Rs"},
-    {project:"05",projectName:"Triple effect evaporator with Thermo compressor followed by ATFD",clientName:"APex Ecotech Pvt Ltd",projectType:"BGS",location:"Bangalore",incharge:"Raj Kumar",tasks:"25/50",start:"12-Nov-2020",setup:"25-Dec-2020",status:"On Hold",awarded:"5,50,000 Rs",invoiced:"3,50,000 Rs",due:"2,00,000 Rs"},
+    {project:"065",projectName:"Triple effect evaporator followed by ATFD",clientName:"Biotherm Industries",projectType:"ZLDP",location:"Hyderabad",incharge:"Dhanraj",tasks:"56/75",start:"13-Dec-2020",setup:"13-Feb-2021",status:"Active",awarded:"2,50,000 Rs",invoiced:"1,50,000 Rs",due:"1,00,000 Rs"},
+    {project:"054",projectName:"Triple effect evaporator with Thermo compressor followed by ATFD",clientName:"APex Ecotech Pvt Ltd",projectType:"BGS",location:"Bangalore",incharge:"Raj Kumar",tasks:"25/50",start:"12-Nov-2020",setup:"25-Dec-2020",status:"On Hold",awarded:"5,50,000 Rs",invoiced:"3,50,000 Rs",due:"2,00,000 Rs"},
+    {project:"061",projectName:"Triple effect evaporator followed by ATFD",clientName:"Biotherm Industries",projectType:"ZLDP",location:"Hyderabad",incharge:"Dhanraj",tasks:"56/75",start:"13-Dec-2020",setup:"13-Feb-2021",status:"Active",awarded:"2,50,000 Rs",invoiced:"1,50,000 Rs",due:"1,00,000 Rs"},
+    {project:"052",projectName:"Triple effect evaporator with Thermo compressor followed by ATFD",clientName:"APex Ecotech Pvt Ltd",projectType:"BGS",location:"Bangalore",incharge:"Raj Kumar",tasks:"25/50",start:"12-Nov-2020",setup:"25-Dec-2020",status:"On Hold",awarded:"5,50,000 Rs",invoiced:"3,50,000 Rs",due:"2,00,000 Rs"},
 
 
 
